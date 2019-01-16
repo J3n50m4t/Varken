@@ -58,8 +58,8 @@ class INIParser(object):
             self.logger.error('File missing (%s) in %s', ini, self.data_folder)
             if inifile == 'varken.ini':
                 try:
-                    self.logger.debug('Creating varken.ini from varken.example.ini')
-                    copyfile(join(self.data_folder, 'varken.example.ini'), file_path)
+                    self.logger.debug('Creating varken.ini from varken.ini')
+                    copyfile(join(self.data_folder, 'varken.ini'), file_path)
                 except IOError as e:
                     self.logger.error("Varken does not have permission to write to %s. Error: %s - Exiting.", e,
                                       self.data_folder)
@@ -115,9 +115,9 @@ class INIParser(object):
             return url_check
 
     def rectify_ini(self):
-        self.logger.debug('Rectifying varken.ini with varken.example.ini')
+        self.logger.debug('Rectifying varken.ini with varken.ini')
         current_ini = self.config
-        example_ini = self.read_file('varken.example.ini')
+        example_ini = self.read_file('varken.ini')
 
         for name, section in example_ini.items():
             if name not in current_ini:
