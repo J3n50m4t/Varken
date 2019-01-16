@@ -10,6 +10,6 @@ RUN python3 -m pip install -r /app/requirements.txt
 
 WORKDIR /app
 
-CMD python3 /app/Varken.py --data-folder /config
+RUN python3 /app/Varken.py --data-folder /config
 
 VOLUME /config
