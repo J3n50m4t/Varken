@@ -54,17 +54,6 @@ class INIParser(object):
         ini = inifile
         file_path = join(self.data_folder, ini)
 
-        if not exists(file_path):
-            self.logger.error('File missing (%s) in %s', ini, self.data_folder)
-            if inifile == 'varken.ini':
-                try:
-                    self.logger.debug('Creating varken.ini from varken.ini')
-                    copyfile(join(self.data_folder, 'varken.ini'), file_path)
-                except IOError as e:
-                    self.logger.error("Varken does not have permission to write to %s. Error: %s - Exiting.", e,
-                                      self.data_folder)
-                    exit(1)
-
         self.logger.debug('Reading from %s', inifile)
         with open(file_path) as config_ini:
             config.read_file(config_ini)
