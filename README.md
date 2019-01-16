@@ -2,7 +2,7 @@
 
 
 
-[![Forked Gitub repo](https://cloud.docker.com/repository/docker/j3n50m4t/varken_fork/)](https://cloud.docker.com/repository/docker/j3n50m4t/varken_fork/)
+[Forked Gitub repo](https://cloud.docker.com/repository/docker/j3n50m4t/varken_fork/)
 
 
 
